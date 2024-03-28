@@ -1,0 +1,21 @@
+[package]
+name = "crabe"
+version = "0.1.0"
+edition = "2021"
+authors = ["NAMeC"]
+default-run="crabe"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.4.7", features = ["derive"] }
+log = "0.4.20"
+env_logger = "0.10.0"
+ctrlc = "3.4.1"
+
+crabe_framework = { path = "../crabe_framework" }
+crabe_protocol = { path = "../crabe_protocol" }
+crabe_io = { path = "../crabe_io" }
+crabe_filter = { path = "../crabe_filter" }
+crabe_decision = { path = "../crabe_decision" }
+crabe_guard = { path = "../crabe_guard" }
