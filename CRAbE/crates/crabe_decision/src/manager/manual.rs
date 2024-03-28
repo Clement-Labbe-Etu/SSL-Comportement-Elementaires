@@ -1,6 +1,6 @@
 use crate::action::ActionWrapper;
 use crate::manager::Manager;
-use crate::strategy::testing::goto; 
+use crate::strategy::testing::look_at; 
 use nalgebra::Point2;
 use crate::strategy::Strategy;
 use crabe_framework::data::tool::ToolData;
@@ -21,7 +21,7 @@ impl Manual {
     /// Creates a new `Manual` instance with the desired strategies to test.
     pub fn new() -> Self {
         Self {
-            strategies: vec![Box::new(goto::new(0 , Point2::new(0.0,0.0)))],
+            strategies: vec![Box::new(look_at::new(0 , Point2::new(0.0,0.0)))],
         }
     }
 }
